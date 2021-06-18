@@ -1,6 +1,7 @@
+
+}
 .div_1:hover, .div_2:hover, .div_3:hover, .div_4:hover, .div_5:hover{
     border-style: outset;
-
 }
 .div_1{
  background-color: antiquewhite;
@@ -15,10 +16,10 @@
     text-align: center;
 }
 .div_4{
-    background-color: azure;
+    background-color: blue;
 }
 .div_5{
-    background-color: beige;
+    background-color: red;
 }
 
 .h31{
