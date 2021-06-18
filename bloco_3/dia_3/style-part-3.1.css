@@ -1,0 +1,31 @@
+.div_1:hover, .div_2:hover, .div_3:hover, .div_4:hover, .div_5:hover{
+    border-style: outset;
+
+}
+.div_1{
+ background-color: antiquewhite;
+}
+.div_2{
+    background-color: aqua;
+}
+.div_3{
+    background-color: aquamarine;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+.div_4{
+    background-color: azure;
+}
+.div_5{
+    background-color: beige;
+}
+
+.h31{
+    color: blue;
+    text-align: center;
+}
+
+h3 {
+    font-style: italic;
+}
