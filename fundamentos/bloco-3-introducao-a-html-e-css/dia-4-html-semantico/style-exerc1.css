@@ -51,6 +51,15 @@ nav.menu a:hover{
     text-align: center;
 }
 
+.ref li a{
+    text-decoration: none;
+    color: blue;
+}
+
+.image1{
+    float: right;
+}
+
 
 aside.lateral{
     position: absolute;
@@ -93,19 +102,12 @@ aside.lateral span{
     color: blue;
 }
 
-footer.ref{
+footer{
     background-color: rgba(128, 128, 128, 0.303);
     position: absolute;
     z-index: 1;
-    bottom: 0px;
+    bottom: -210px;
     width: 100%;
-}
-
-footer.ref section{
-    margin: 8px;
-}
-
-footer.ref a{
-    text-decoration: none;
-    font-style: italic;
+    text-align: center;
+    font-weight: 400;
 }
