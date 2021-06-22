@@ -43,15 +43,69 @@ nav.menu a:hover{
     width: 75%;
 }
 
+.artigo section{
+    margin: 8px;
+}
+
 .artigo h2{
     text-align: center;
 }
 
 
 aside.lateral{
-    background-color: ;
     position: absolute;
+    z-index: 2;
     right: 10px;
     top: 125px;
-    width: 20%;
+    width: auto;
+}
+
+aside.lateral h1{
+    font-size: 17px;
+    text-align: center;
+    background-color:  rgba(128, 128, 128, 0.303);
+    padding: 4px;
+}
+
+div.picture{
+    width: auto;
+    margin-left: 40px;
+
+}
+
+aside.lateral h2{
+    font-size: 15px;
+    text-align: center;
+    background-color:  rgba(128, 128, 128, 0.303);
+}
+
+aside.lateral ul{
+    font-size: 13px;
+    list-style: none;
+}
+
+aside.lateral p{
+    font-size: 13px;
+    text-align: center;
+}
+aside.lateral span{
+    font-style: italic;
+    color: blue;
+}
+
+footer.ref{
+    background-color: rgba(128, 128, 128, 0.303);
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    width: 100%;
+}
+
+footer.ref section{
+    margin: 8px;
+}
+
+footer.ref a{
+    text-decoration: none;
+    font-style: italic;
 }
