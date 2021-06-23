@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body{
+    margin: 0%;
+    padding: 0%;
+    background-color: rgba(243, 195, 122, 0.624);
+    font-family: 'Montserrat', sans-serif;
+}
+header.home{
+    height: 80px;
+    background-color:rgba(128, 128, 128, 0.303);
+    text-align: center;
+}
+
+nav.menu ul{
+    background-color:rgba(128, 128, 128, 0.303);
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+
+nav.menu li {
+    display: inline;  
+
+}
+
+nav.menu li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 2px 10px;
+}
+
+nav.menu a:hover{
+    background-color: navajowhite; 
+
+}
+
+.artigo{
+    background-color: rgba(128, 128, 128, 0.303);
+    position: absolute;
+    width: 75%;
+}
+
+.artigo section{
+    margin: 8px;
+}
+
+.artigo h2{
+    text-align: center;
+}
+
+.ref li a{
+    text-decoration: none;
+    color: blue;
+}
+
+.image1{
+    float: right;
+}
+
+
+aside.lateral{
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    top: 125px;
+    width: auto;
+}
+
+aside.lateral h1{
+    font-size: 17px;
+    text-align: center;
+    background-color:  rgba(128, 128, 128, 0.303);
+    padding: 4px;
+}
+
+div.picture{
+    width: auto;
+    margin-left: 40px;
+
+}
+
+aside.lateral h2{
+    font-size: 15px;
+    text-align: center;
+    background-color:  rgba(128, 128, 128, 0.303);
+}
+
+aside.lateral ul{
+    font-size: 13px;
+    list-style: none;
+}
+
+aside.lateral p{
+    font-size: 13px;
+    text-align: center;
+}
+aside.lateral span{
+    font-style: italic;
+    color: blue;
+}
+
+footer{
+    background-color: rgba(128, 128, 128, 0.303);
+    position: absolute;
+    z-index: 1;
+    bottom: -210px;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+}
