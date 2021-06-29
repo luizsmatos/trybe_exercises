@@ -64,14 +64,59 @@
 //  Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']; .
 //  Valor esperado no retorno da função: Fernanda .
 
-function array(word){
-  let maiorPalavra = word[0];
-    for (let index in word){
-      if (maiorPalavra.length < word[index].length){
-      maiorPalavra = word[index];
-      }
-    }
-  return maiorPalavra;
+// function array(word){
+//   let maiorPalavra = word[0];
+//     for (let index in word){
+//       if (maiorPalavra.length < word[index].length){
+//       maiorPalavra = word[index];
+//       }
+//     }
+//   return maiorPalavra;
+// }
+
+// console.log(array(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+
+// 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+
+//  Array de teste: [2, 3, 2, 5, 8, 2, 3]; .
+//  Valor esperado no retorno da função: 2 .
+
+// function maiorRepeticao(numeros){
+//   let quantRepetido = 0;
+//   let quantNumero = 0;
+//   let indexNumeroRepetido = 0;
+//   for (let index in numeros){
+//     let verificaNumero = numeros[index];
+//     for (let sIndex in numeros){
+//     if (verificaNumero === numeros[sIndex]){
+//     quantNumero += 1;
+//       }
+//     }
+//     if (quantNumero > quantRepetido){
+//       quantRepetido = quantNumero;
+//       indexNumeroRepetido = index;
+//     }
+//     quantNumero = 0;
+//   }
+//   return numeros[indexNumeroRepetido];
+// }
+
+// console.log(maiorRepeticao([2, 3, 2, 5, 8, 2, 3]))
+
+// 5 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+
+//  Valor de teste: N = 5.
+//  Valor esperado no retorno da função: 1+2+3+4+5 = 15.
+
+
+function sumTotal(number){
+  let sum = 0;
+  for (let index = 0; index <= number; index += 1){
+    sum = sum + index;
+  }
+  return sum;
 }
 
-console.log(array(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+console.log(sumTotal(10));
+
