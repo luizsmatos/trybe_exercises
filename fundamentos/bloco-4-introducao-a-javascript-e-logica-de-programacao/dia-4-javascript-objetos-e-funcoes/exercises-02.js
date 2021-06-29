@@ -104,19 +104,45 @@
 
 // console.log(maiorRepeticao([2, 3, 2, 5, 8, 2, 3]))
 
-// 5 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+// 6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
 
 //  Valor de teste: N = 5.
 //  Valor esperado no retorno da função: 1+2+3+4+5 = 15.
 
 
-function sumTotal(number){
-  let sum = 0;
-  for (let index = 0; index <= number; index += 1){
-    sum = sum + index;
-  }
-  return sum;
-}
+// function sumTotal(number){
+//   let sum = 0;
+//   for (let index = 0; index <= number; index += 1){
+//     sum = sum + index;
+//   }
+//   return sum;
+// }
 
-console.log(sumTotal(10));
+// console.log(sumTotal(10));
 
+
+// 7 - Crie uma função que receba uma string word e outra string ending . Verifique se a string ending é o final da string word . Considere que a string ending sempre será menor que a string word .
+
+//  Valor de teste: 'trybe' e 'be'
+//  Valor esperado no retorno da função: true
+//  verificaFimPalavra('trybe', 'be') ;
+//  Retorno esperado: true
+//  verificaFimPalavra('joaofernando', 'fernan') ;
+//  Retorno esperado: false
+
+
+
+
+// function verificaFimPalavra(palavra, fimPalavra) {
+//   palavra = palavra.split('');
+//   fimPalavra = fimPalavra.split('');
+//   controle = true;
+//   for (let index = 0; index < fimPalavra.length; index += 1) {
+//     if (palavra[palavra.length - fimPalavra.length + index] != fimPalavra[index]) {
+//       controle = false;
+//     }
+//   }
+//   return controle;
+// }
+
+// verificaFimPalavra('trybe', 'be');
