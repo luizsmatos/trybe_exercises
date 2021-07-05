@@ -58,11 +58,31 @@
   <body>
     <script>
 // Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
-      
+    const body = document.querySelector('body');
+    const h1Child = document.createElement('h1');
+    h1Child.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+    h1Child.style.color = 'red';
+    h1Child.style.textAlign = 'center';
+    body.appendChild(h1Child);
 
 // Adicione a tag div com a classe main-content como filho da tag body ;
+    const divChild = document.createElement('div');
+    divChild.className = 'main-content';
+    body.appendChild(divChild);
+
 // Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+    const divMain = document.querySelector('.main-content');
+    const divCenter = document.createElement('div')
+    divCenter.className = 'center-content';
+    divMain.appendChild(divCenter);
+    
 // Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+    const divCenterCapture = document.querySelector('.center-content');
+    const newParagraph = document.createElement('p');
+    newParagraph.innerText = 'Vamos que vamos, TRYBE!'
+    divCenterCapture.appendChild(newParagraph);
+    
+    
 // Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
 // Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
 // Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do div criado no passo 5;
