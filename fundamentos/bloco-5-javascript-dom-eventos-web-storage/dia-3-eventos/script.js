@@ -22,24 +22,34 @@ createDaysOfTheWeek();
 // Os dias 24, 25 e 31 são feriados e, além da classe day , devem conter também a classe holiday . Ex: <li class="day holiday">24</li>
 // Os dias 4, 11, 18 e 25 são Sexta-feira. Eles devem conter a classe day e a classe friday . Ex: <li class="day friday">4</li>
 
-const listDays = document.getElementById('days');
+
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
-for (let index = 0; index < dezDaysList.length; index += 1) {
-  const days = dezDaysList[index];
-  const createListDays = document.createElement('li');
-  createListDays.innerHTML = days;
 
+function createDaysList () {
+const listDays = document.getElementById('days');
+
+  for (let index = 0; index < dezDaysList.length; index += 1) {
+    const days = dezDaysList[index];
+    const createListDays = document.createElement('li');
+        
   if (days === 24 || days === 25 || days === 31) {
     createListDays.classList.add('day','holiday');
+    createListDays.innerHTML = days;
+    listDays.appendChild(createListDays);
   } else if (days === 4 || days === 11 || days === 18 || days === 25) {
     createListDays.classList.add('day','friday');
+    createListDays.innerHTML = days;
+    listDays.appendChild(createListDays);
   } else {
     createListDays.classList.add('day');
+    createListDays.innerHTML = days;
+    listDays.appendChild(createListDays);
+    }
   }
-  
-  listDays.appendChild(createListDays);
-}
+};
+
+createDaysList();
 
 // Exercício 2:
 
@@ -47,7 +57,20 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
 // Adicione a este botão a ID "btn-holiday" .
 // Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 
+function newButtonHoliday(buttonName) {
+const buttonContainer = document.querySelector('.buttons-container');
 const newButton = document.createElement('button');
-newButton.id = 'btn-holiday';
+const newButtonId = 'btn-holiday';
 
-document.querySelector('.buttons-container').appendChild(newButton);
+newButton.innerHTML = buttonName;
+newButton.id = newButtonId;
+buttonContainer.appendChild(newButton);
+}
+
+newButtonHoliday('Feriados');
+
+// Exercício 3:
+
+// Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
+// É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
+
