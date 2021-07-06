@@ -61,10 +61,7 @@
     const h1Child = document.createElement('h1');
     document.body.appendChild(h1Child);
     h1Child.innerHTML = 'Exercício 5.2 - JavaScript DOM';
-    h1Child.style.color = 'red';
-    h1Child.style.textAlign = 'center';
     
-
 // Adicione a tag div com a classe main-content como filho da tag body ;
     const divMain = document.createElement('div');
     divMain.classList.add('main-content');
@@ -110,18 +107,28 @@
 
     divRightContent.appendChild(newList);
 
-    
-
 // Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
+
     for (let index = 1; index < 4; index += 1){
       let h3Childs = document.createElement('h3')
       h3Childs.innerText = index;
       divMain.appendChild(h3Childs);
     }
 
+// ----- SEGUNDA PARTE -----
+
+
 // Adicione a classe title na tag h1 criada;
+    h1Child.classList.add('title')
+
 // Adicione a classe description nas 3 tags h3 criadas;
+    const h3s = document.querySelectorAll('h3');
+    for (index = 0; index < h3s.length; index += 1){
+      h3s[index].classList.add('description');
+    }
+
 // Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+
 // Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div ;
 // Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
 // Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
