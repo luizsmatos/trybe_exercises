@@ -184,9 +184,26 @@ function colorTask (color) {
   const divTasks = document.querySelector('.my-tasks')
   const createDivColor = document.createElement('div');
   divTasks.appendChild(createDivColor);
-  divTasks.classList.add('task');
+  createDivColor.classList.add('task');
 
   createDivColor.style.backgroundColor = color;
 }
 
 colorTask('green');
+
+// Exercício 9:
+
+// Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
+// Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
+
+const taskElement = document.querySelector('.task');
+
+taskElement.addEventListener('click', function changeClassTask (event) {
+  let oldClass = 'task'
+  let newClass = 'task selected'
+  if (taskElement.className === newClass) {
+    event.target.className = oldClass;
+  } else {
+    event.target.className = newClass;
+  }
+})
