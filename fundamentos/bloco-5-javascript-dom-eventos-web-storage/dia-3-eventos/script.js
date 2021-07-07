@@ -33,12 +33,16 @@ const listDays = document.getElementById('days');
     const days = dezDaysList[index];
     const createListDays = document.createElement('li');
         
-  if (days === 24 || days === 25 || days === 31) {
+  if (days === 24 || days === 31) {
     createListDays.classList.add('day','holiday');
     createListDays.innerHTML = days;
     listDays.appendChild(createListDays);
-  } else if (days === 4 || days === 11 || days === 18 || days === 25) {
+  } else if (days === 4 || days === 11 || days === 18) {
     createListDays.classList.add('day','friday');
+    createListDays.innerHTML = days;
+    listDays.appendChild(createListDays);
+  } else if (days === 25) {
+    createListDays.classList.add('day','friday', 'holiday');
     createListDays.innerHTML = days;
     listDays.appendChild(createListDays);
   } else {
@@ -74,7 +78,7 @@ newButtonHoliday('Feriados');
 // Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
 
-function changeColorButton () {
+function changeColorButtonHoliday () {
   const holidayElement = document.getElementsByClassName('holiday');
   const buttonHoliday = document.querySelector('#btn-holiday');
   const setNewColor = 'rgb(190, 245, 174)';
@@ -91,7 +95,7 @@ function changeColorButton () {
     }
   })
 }
-changeColorButton();
+changeColorButtonHoliday();
 
 // Exercício 4:
 
@@ -115,4 +119,25 @@ function newButtonFriday(buttonName) {
 
 // Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
+
+function changeTextButtonFriday () {
+  const fridayElement = document.getElementsByClassName('friday');
+  const buttonFriday = document.querySelector('#btn-friday');
+  const setNewText = 'SEXTOU!';
+  const fridays = [4, 11, 18, 25];
+
+
+  buttonFriday.addEventListener('click', function() {
+  for (let index = 0; index < fridayElement.length; index += 1) {
+    let daysFriday = fridayElement[index];
+      if (daysFriday.innerHTML === setNewText) {
+        daysFriday.innerHTML = fridays[index];
+      } else {
+      daysFriday.innerHTML = setNewText
+      }
+    }
+  })
+}
+changeTextButtonFriday();
+
 
