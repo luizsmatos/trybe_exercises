@@ -8,6 +8,43 @@
     <title>Forms Curriculo</title>
   </head>
   <body>
+    <div class="personal-info container-box" >
+    <form >
+      <fieldset>
+        <label for="full-name">Nome:</label>
+        <input type="text" name="full-name" id="full-name" maxlength="40" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" maxlength="50" required>
+        <label for="cpf-number">CPF:</label>
+        <input type="number" name="cpf" id="cpf-number" maxlength="11" required>
+        <label for="address">Endereco:</label>
+        <input type="sele" name="address" id="address" maxlength="200" required>
+        <label for="city">Cidade:</label>
+        <input type="text" name="city" id="city" maxlength="28" required>
+        <label for="province">Estado:</label>
+        <select name="province" id="province" required>
+        
+        </select>
+        <label for="complement"></label>
+        <input type="radio" name="complement" id="complement" maxlength="28" required>
+        
+      </fieldset>
+    </div>
+      <div class="last-jobs container-box">
+        <fieldset>
+          <textarea name="resume" id="resume" cols="30" rows="10" maxlength="1000" required>Resumo do currículo:</textarea>
+          <label for="job">Cargo:</label>
+          <input type="text" name="job" id="job">
+          <label for="disc-job">Descrição do cargo:</label>
+          <input type="text" name="disc-job" id="disc-job" maxlength="500" required>
+          <label for="date">Data de início:</label>
+          <input type="date" name="date" id="date">
+        </fieldset>
+      </div>
+      <div class="container-box">
+        <button type="submit" id=submit>Enviar Curriculo!</button>
+      </div>
+    </form>
     <script src="script.js"></script>
   </body>
 </html>
