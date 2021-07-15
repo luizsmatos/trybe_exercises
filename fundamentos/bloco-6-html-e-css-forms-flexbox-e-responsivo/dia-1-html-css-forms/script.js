@@ -39,3 +39,61 @@ function getUserValue (event) {
   event.preventDefault()
 }
 
+buttonSubmit.addEventListener('click', getUserValue);
+
+const checks = {
+  name: {
+    maxLength: 40,
+    required: true,
+  },
+  email: {
+    maxLength: 50,
+    required: true
+  },
+  cpf: {
+    maxLength: 11,
+    required: true
+  },
+  address: {
+    maxLength: 200,
+    required: true
+  },
+  city: {
+    maxLength: 28,
+    required: true,
+  },
+  province: {
+    type: 'select',
+    required: true,
+  },
+  complement: {
+    type: 'radio',
+    required: true,
+  },
+  resume: {
+    maxLength: 1000,
+    required: true,
+  },
+  job: {
+    maxLength: 40,
+    required: true,
+  },
+  jobDisc: {
+    maxLength: 500,
+    required: true,
+  },
+  date: {
+    type: 'date',
+    required: true,
+  }
+}
+
+function validationName () {
+  const fullName = document.getElementById('full-name');
+  const valueName = fullName.value
+
+  if (valueName.length > checks.name.maxLength || valueName === '') {
+    alert('')
+  }
+
+}
