@@ -8,17 +8,15 @@
   font-family: Comfortaa, sans-serif;
 }
 
-.container-box {
+.container {
   background-color: rgb(250, 228, 186);
   border: 1px solid darkgray;
   border-radius: 3px;
-  width: 80%;
   padding: 35px;
-  margin: 20px auto;
+  margin: 15px auto;
 }
 
-.hero-title {
-  text-align: center;
+.title {
   color: rgb(119, 75, 8);
 }
 
