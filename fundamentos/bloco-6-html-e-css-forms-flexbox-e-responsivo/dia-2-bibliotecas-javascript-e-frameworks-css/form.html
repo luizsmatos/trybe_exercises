@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Forms Curriculo</title>
+</head>
+
+<body>
+  <header class="hero-title container-box">
+    <h1>Submeter Curriculo.</h1>
+    <p><em>Preencha as informacoes abaixo:</em></p>
+  </header>
+  <main>
+  <div class="personal-info container-box">
+    <form action="GET">
+      <fieldset class="info">
+        <legend class="legenda">Informacoes Pessoais</legend>
+        <label for="full-name">Nome:</label>
+        <input type="text" name="full-name" id="full-name" class="forms-style" maxlength="40" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" class="forms-style" maxlength="50" required>
+        <label for="cpf-number">CPF:</label>
+        <input type="number" name="cpf" id="cpf-number" class="forms-style" min ="1" maxlength="11" required>
+        <label for="address">Endereco:</label>
+        <input type="text" name="address" id="address" class="forms-style" maxlength="200" required>
+        <label for="city">Cidade:</label>
+        <input type="text" name="city" id="city" class="forms-style" maxlength="28" required>
+        <label for="province">Estado:</label>
+        <select name="province" id="province" required>
+
+        </select>
+        <fieldset class="complement">
+          <legend class="legenda">Complemento</legend>
+          <label for="house">Casa</label>
+          <input type="radio" name="complement" value="house" id="house" required>
+          <label for="apartment">Apartamento</label>
+          <input type="radio" name="complement" value="apartment" id="apartment" required>
+        </fieldset>
+
+      </fieldset>
+  </div>
+  <div class="container-box">
+    <fieldset class="last-jobs">
+      <legend class="legenda">Informacoes Profissionais</legend>
+      <textarea name="resume" id="resume" class="forms-style" cols="30" rows="10" maxlength="1000" placeholder="Resumo do currículo:" required></textarea>
+      <label for="job">Cargo:</label>
+      <input type="text" name="job" id="job" class="forms-style" maxlength="40" required>
+      <label for="disc-job">Descrição do cargo:</label>
+      <input type="text" name="disc-job" id="disc-job" class="forms-style" maxlength="500" required>
+      <label for="date">Data de início:</label>
+      <input type="date" name="date" id="date">
+    </fieldset>
+      <button type="submit" id=submit >Enviar Curriculo</button>
+  </div>
+  </form>
+</main>
+  <script src="script.js"></script>
+</body>
+
+</html>
