@@ -12,53 +12,91 @@
 </head>
 
 <body>
-  <div class="container">
-  <header class="">
-    <h1 class="title text-center">Submeter Curriculo.</h1>
-    <p class="title text-center"><em>Preencha as informacoes abaixo:</em></p>
-  </header>
-</div>
+  <div class="hero container">
+    <header>
+      <h1 class="title text-center">Submeter Curriculo.</h1>
+      <p class="title text-center"><em>Preencha as informacoes abaixo:</em></p>
+    </header>
+  </div>
+  <hr>
   <main>
-    <div class="personal-info container">
-      <form action="GET">
-        <fieldset class="info">
-          <legend class="legenda">Informacoes Pessoais</legend>
-          <label for="full-name">Nome:</label>
-          <input type="text" name="full-name" id="full-name" class="forms-style" maxlength="40" required>
-          <label for="email">Email:</label>
-          <input type="email" name="email" id="email" class="forms-style" maxlength="50" required>
-          <label for="cpf-number">CPF:</label>
-          <input type="number" name="cpf" id="cpf-number" class="forms-style" min="1" maxlength="11" required>
-          <label for="address">Endereco:</label>
-          <input type="text" name="address" id="address" class="forms-style" maxlength="200" required>
-          <label for="city">Cidade:</label>
-          <input type="text" name="city" id="city" class="forms-style" maxlength="28" required>
-          <label for="province">Estado:</label>
-          <select name="province" id="province" required>
-          </select>
-          <fieldset class="complement">
-            <legend class="legenda">Complemento</legend>
-            <label for="house">Casa</label>
-            <input type="radio" name="complement" value="house" id="house" required>
-            <label for="apartment">Apartamento</label>
-            <input type="radio" name="complement" value="apartment" id="apartment" required>
-          </fieldset>
-
-        </fieldset>
-    </div>
     <div class="container">
-      <fieldset class="last-jobs">
-        <legend class="legenda">Informacoes Profissionais</legend>
-        <textarea name="resume" id="resume" class="forms-style" cols="30" rows="10" maxlength="1000"
-          placeholder="Resumo do currículo:" required></textarea>
-        <label for="job">Cargo:</label>
-        <input type="text" name="job" id="job" class="forms-style" maxlength="40" required>
-        <label for="disc-job">Descrição do cargo:</label>
-        <input type="text" name="disc-job" id="disc-job" class="forms-style" maxlength="500" required>
-        <label for="date">Data de início:</label>
-        <input type="date" name="date" id="date">
-      </fieldset>
-      <button type="submit" id=submit>Enviar Curriculo</button>
+      <form action="GET" class="row g-3">
+        <legend class="title">Informacoes Pessoais</legend>
+        <div class="col-md-4">
+          <label class="form-label" for="first-name">Nome:</label>
+          <input type="text" name="first-name" id="first-name" class="form-control" maxlength="40" required>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label" for="last-name">Sobrenome:</label>
+          <input type="text" name="last-name" id="last-name" class="form-control" maxlength="40" required>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label" for="cpf-number">CPF:</label>
+          <input type="number" name="cpf" id="cpf-number" class="form-control" min="1" maxlength="11" required>
+        </div>
+        <div>
+          <label class="form-label" for="email">Email:</label>
+          <div class="input-group">
+            <span class="input-group-text" id="inputGroupPrepend2">@</span>
+            <input type="email" name="email" id="email" class="form-control" maxlength="50" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="city">Cidade:</label>
+          <input type="text" name="city" id="city" class="form-control" maxlength="28" required>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label" for="province">Estado:</label>
+          <select class="form-select" name="province" id="province" required>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="validationDefault05" class="form-label">Cep</label>
+          <input type="number" class="form-control" id="validationDefault05" required>
+        </div>
+        <div>
+          <label class="form-label" for="address">Endereco:</label>
+          <div class="input-group">
+            <input type="text" name="address" id="address" class="form-control" maxlength="200" required>
+          </div>
+        </div>
+        <fieldset class="complement">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="complement" value="house" id="house" required>
+            <label class="form-check-label" for="house">Casa</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="complement" value="apartment" id="apartment" required>
+            <label class="form-check-label" for="apartment">Apartamento</label>
+          </div>
+      </form>
+    </div>
+    <hr>
+    <div class="container">
+      <form action="GET" class="row g-3">
+        <legend class="title">Informacoes Profissionais</legend>
+        <div class="form-floating">
+          <textarea name="resume" id="resume" class="form-control" cols="30" maxlength="1000"
+            placeholder="Resumo do currículo:" required></textarea>
+          <label for="resume">Resumo do currículo:</label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label" for="job">Cargo:</label>
+          <input type="text" name="job" id="job" class="form-control" maxlength="40" required>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label" for="disc-job">Descrição do cargo:</label>
+          <input type="text" name="disc-job" id="disc-job" class="form-control" maxlength="500" required>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label" for="date">Data de início:</label>
+          <input class="form-control" type="date" name="date" id="date">
+        </div>
+        <div>
+          <button class="btn btn-success" type="submit" id=submit>Enviar Curriculo</button>
+          <button class="btn btn-warning" type="reset" id=reset>Limpar Informacoes</button>
+        </div>
     </div>
     </form>
   </main>

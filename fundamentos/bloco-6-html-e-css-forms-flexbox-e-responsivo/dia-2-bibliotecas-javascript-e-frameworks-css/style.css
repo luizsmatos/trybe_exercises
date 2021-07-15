@@ -8,32 +8,16 @@
   font-family: Comfortaa, sans-serif;
 }
 
-.container {
+body {
   background-color: rgb(250, 228, 186);
-  border: 1px solid darkgray;
-  border-radius: 3px;
-  padding: 35px;
-  margin: 15px auto;
+}
+
+.hero {
+  margin-top: 30px;
 }
 
 .title {
   color: rgb(119, 75, 8);
-}
-
-.info label {
-  font-weight: bold;
-  color: rgb(49, 49, 49);;
-  font-size: 15px;
-}
-
-.forms-style {
-  width: 100%;
-  padding: 5px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid darkgray;
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 /* https://pt.stackoverflow.com/questions/177573/retirar-as-setas-no-campo-tipo-number */
@@ -49,46 +33,7 @@ input[type=number] {
 
 }
 
-#province {
-  margin: 10px;
-}
-
-.info {
-  padding: 8px;
-}
-
-.complement {
-  padding: 8px;
-  margin-top: 15px;
-}
-
-.legenda {
-  font-size: 20px;
-  color: rgb(119, 75, 8);
-  font-style: italic;
-}
-
-.last-jobs {
-  padding: 8px;
-}
-
-.last-jobs label {
-  font-weight: bold;
-  color: rgb(49, 49, 49);;
-  font-size: 15px;
-}
-
 #resume {
   resize: none;
-}
-
-#submit {
-  margin: 10px auto;
-  padding: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px;
-  border: 1px solid darkgray;
-  background-color: rgb(68, 134, 68);
-  color: white;
+  height: 150px;
 }
