@@ -1,4 +1,6 @@
 const province = document.getElementById('province');
+const date = document.getElementById('date')
+const buttonSubmit = document.getElementById('submit');
 
 // Creditos pelo Array, colega de turma @Michael
 
@@ -19,3 +21,21 @@ function createOptionProvince () {
   }
 }
 createOptionProvince ()
+
+function checkDate () {
+  const dateValueSplit = date.value.split('-')
+  const splitYear = parseInt(dateValueSplit[0], 10)
+  const splitMonth = parseInt(dateValueSplit[1], 10)
+  const splitDay = parseInt(dateValueSplit[2], 10)
+
+  if (splitDay < 0 || splitDay > 31) alert('Dia esta com formato errado!');
+  if (splitMonth < 0 || splitMonth > 12) alert('Mes esta com formato errado!');
+  if (splitYear < 0 || splitYear > 2021) alert('Ano esta com formato errado!')
+}
+
+checkDate()
+
+function getUserValue (event) {
+  event.preventDefault()
+}
+
