@@ -22,6 +22,12 @@ function createOptionProvince () {
 }
 createOptionProvince ()
 
+// Biblioteca DatePickerX para checar a data!
+
+function checkDate() {
+  
+checkDate()
+
 
 
 
