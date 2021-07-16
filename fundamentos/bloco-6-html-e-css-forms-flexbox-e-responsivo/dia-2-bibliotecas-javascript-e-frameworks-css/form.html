@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
   <title>Forms Curriculo</title>
 </head>
 
@@ -22,95 +22,109 @@
   <hr>
   <main>
     <div class="container">
-      <form action="GET" class="row g-3">
-        <legend class="title">Informacoes Pessoais</legend>
-        <div class="col-md-4">
-          <label class="form-label" for="first-name">Nome:</label>
-          <input type="text" name="first-name" id="first-name" class="form-control" maxlength="40" required>
-        </div>
-        <div class="col-md-4">
-          <label class="form-label" for="last-name">Sobrenome:</label>
-          <input type="text" name="last-name" id="last-name" class="form-control" maxlength="40" required>
-        </div>
-        <div class="col-md-4">
-          <label class="form-label" for="cpf-number">CPF:</label>
-          <input type="number" name="cpf" id="cpf-number" class="form-control" min="1" maxlength="11" required>
-        </div>
-        <div>
-          <label class="form-label" for="email">Email:</label>
-          <div class="input-group">
-            <span class="input-group-text" id="inputGroupPrepend2">@</span>
-            <input type="email" name="email" id="email" class="form-control" maxlength="50" required>
+      <form action="" method="GET" class="row g-3 js-form">
+        <div class="row g-3">
+          <legend class="title">Informacoes Pessoais</legend>
+          <div class="col-md-4">
+            <label class="form-label" for="first-name">Nome:</label>
+            <input type="text" name="first-name" data-validate-field="first-name" id="first-name" class="form-control"
+              maxlength="40" required>
           </div>
-        </div>
-        <div class="col-md-6">
-          <label class="form-label" for="city">Cidade:</label>
-          <input type="text" name="city" id="city" class="form-control" maxlength="28" required>
-        </div>
-        <div class="col-md-3">
-          <label class="form-label" for="province">Estado:</label>
-          <select class="form-select" name="province" id="province" required>
-            <option value="disable" disabled selected></option>
-          </select>
-        </div>
-        <div class="col-md-3">
-          <label for="validationDefault05" class="form-label">Cep</label>
-          <input type="number" class="form-control" id="validationDefault05" required>
-        </div>
-        <div>
-          <label class="form-label" for="address">Endereco:</label>
-          <div class="input-group">
-            <input type="text" name="address" id="address" class="form-control" maxlength="200" required>
+          <div class="col-md-4">
+            <label class="form-label" for="last-name">Sobrenome:</label>
+            <input type="text" name="last-name" data-validate-field="last-name" id="last-name" class="form-control"
+              maxlength="40" required>
           </div>
-        </div>
-        <fieldset class="complement">
+          <div class="col-md-4">
+            <label class="form-label" for="cpf-number">CPF:</label>
+            <input type="text" name="cpf" onblur="formataCPF(this)" data-validate-field="cpf" id="cpf-number" class="form-control" min="1"
+              maxlength="11" required>
+          </div>
+          <div>
+            <label class="form-label" for="email">Email:</label>
+            <div class="input-group">
+              <span class="input-group-text" id="inputGroupPrepend2">@</span>
+              <input type="email" name="email" data-validate-field="email" id="email" class="form-control"
+                maxlength="50" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="city">Cidade:</label>
+            <input type="text" name="city" data-validate-field="city" id="city" class="form-control" maxlength="28"
+              required>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label" for="province">Estado:</label>
+            <select class="form-select" name="province" data-validate-field="province" id="province" required>
+              <option value="disable" disabled selected></option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="validationDefault05" class="form-label">Cep</label>
+            <input type="number" class="form-control" name="cep" data-validate-field="cep" id="validationDefault05"
+              required>
+          </div>
+          <div>
+            <label class="form-label" for="address">Endereco:</label>
+            <div class="input-group">
+              <input type="text" name="address" data-validate-field="address" id="address" class="form-control"
+                maxlength="200" required>
+            </div>
+          </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="complement" value="house" id="house" required>
+            <input class="form-check-input" type="radio" name="complement" data-validate-field="complement"
+              value="house" id="house" required>
             <label class="form-check-label" for="house">Casa</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="complement" value="apartment" id="apartment" required>
+            <input class="form-check-input" type="radio" name="complement" data-validate-field="complement"
+              value="apartment" id="apartment" required>
             <label class="form-check-label" for="apartment">Apartamento</label>
           </div>
+          <hr>
+          <div class="row g-3">
+          <div class="form-floating">
+            <textarea name="resume" data-validate-field="resume" id="resume" class="form-control" cols="30"
+              maxlength="1000" required></textarea>
+            <label for="resume">Resumo do currículo:</label>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label" for="job">Cargo:</label>
+            <input type="text" name="job" data-validate-field="job" id="job" class="form-control" maxlength="40"
+              required>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label" for="start">Data de início:</label>
+            <input class="form-control" type="text" name="start" data-validate-field="start" id="datepicker">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label" for="end">Data de termino:</label>
+            <input class="form-control" type="text" name="end" data-validate-field="end" id="datepicker2">
+          </div>
+          <div>
+            <label class="form-label" for="disc-job">Descrição do cargo:</label>
+            <input type="text" name="disc-job" data-validate-field="disc-job" id="disc-job" class="form-control"
+              maxlength="500" required>
+          </div>
+          <div>
+            <button class="btn btn-success" type="submit" id=submit>Enviar Curriculo</button>
+            <button class="btn btn-warning" type="reset" id=reset>Limpar Informacoes</button>
+          </div>
+        </div>
       </form>
     </div>
-    <hr>
-    <div class="container">
-      <form action="GET" class="row g-3">
-        <legend class="title">Informacoes Profissionais</legend>
-        <div class="form-floating">
-          <textarea name="resume" id="resume" class="form-control" cols="30" maxlength="1000"
-            placeholder="Resumo do currículo:" required></textarea>
-          <label for="resume">Resumo do currículo:</label>
-        </div>
-        <div class="col-md-4">
-          <label class="form-label" for="job">Cargo:</label>
-          <input type="text" name="job" id="job" class="form-control" maxlength="40" required>
-        </div>
-      
-        <div class="col-md-4">
-          <label class="form-label" for="start">Data de início:</label>
-          <input class="form-control" type="text" name="start" id="start">
-        </div>
-        <div class="col-md-4">
-          <label class="form-label" for="end">Data de termino:</label>
-          <input class="form-control" type="text" name="end" id="end">
-        </div>
-        <div>
-          <label class="form-label" for="disc-job">Descrição do cargo:</label>
-          <input type="text" name="disc-job" id="disc-job" class="form-control" maxlength="500" required>
-        </div>
-        <div>
-          <button class="btn btn-success" type="submit" id=submit>Enviar Curriculo</button>
-          <button class="btn btn-warning" type="reset" id=reset>Limpar Informacoes</button>
-        </div>
-    </div>
-    </form>
+    <section class= "inputs">
+      <div id = 'values'>
+
+      </div>
+    </section>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script src="/Just-validate-master/dist/js/just-validate.js"></script>
   <script src="script.js"></script>
 </body>
 
