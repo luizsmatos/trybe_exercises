@@ -81,7 +81,7 @@ function createOptionProvince() {
     province.appendChild(newProvince);
   }
 }
-createOptionProvince();
+
 
 // Formatacao Regex para o campo CPF.
 // Referencia usada https://www.alura.com.br/artigos/formatando-cpf-com-ajuda-das-expressoes-regulares.
@@ -101,11 +101,11 @@ function formataCPF() {
 // Para costumizacao das datas de inicio e final.
 
 let pickerStart = new Pikaday({
-  field: document.getElementById("datepicker"),
+  field: document.getElementById("dateStart"),
   format: "DD/MM/YYYY",
   minDate: new Date(1960, 0, 1),
   maxDate: new Date(),
-  toString(date, format) {
+  toString(date, _format) {
     // you should do formatting based on the passed format,
     // but we will just return 'D/M/YYYY' for simplicity
     const day = date.getDate();
@@ -113,7 +113,7 @@ let pickerStart = new Pikaday({
     const year = date.getFullYear();
     return `${day}/${month}/${year}`;
   },
-  parse(dateString, format) {
+  parse(dateString, _format) {
     // dateString is the result of `toString` method
     const parts = dateString.split("/");
     const day = parseInt(parts[0], 10);
@@ -124,11 +124,11 @@ let pickerStart = new Pikaday({
 });
 
 let pickerEnd = new Pikaday({
-  field: document.getElementById("datepicker2"),
+  field: document.getElementById("dateEnd"),
   format: "DD/MM/YYYY",
   minDate: new Date(1960, 0, 1),
   maxDate: new Date(),
-  toString(date, format) {
+  toString(date, _format) {
     // you should do formatting based on the passed format,
     // but we will just return 'D/M/YYYY' for simplicity
     const day = date.getDate();
@@ -136,7 +136,7 @@ let pickerEnd = new Pikaday({
     const year = date.getFullYear();
     return `${day}/${month}/${year}`;
   },
-  parse(dateString, format) {
+  parse(dateString, _format) {
     // dateString is the result of `toString` method
     const parts = dateString.split("/");
     const day = parseInt(parts[0], 10);
@@ -168,8 +168,11 @@ new window.JustValidate('.js-form', {
     },
     cpf: {
       required: true,
-      minLength: 11,
       maxLength: 11,
+      type: 'number',
+      // function: (cpf, _value) => {
+      //   return (cpf === Number);
+      // },
     },    
     address: {
       required: true,
@@ -182,20 +185,21 @@ new window.JustValidate('.js-form', {
       maxLength: 28,
     },
     province: {
-      type: 'selected',
       required: true,
+      // function: (province, value) => {
+      //   if (province === 'disable') 
+      //   return;
+      // },
     },
-    house: {
-      type: 'radio',
-      required: true,
-    },
-    apartment: {
-      type: 'radio',
+    complement: {
       required: true,
     },
     cep: {
       required: true,
       cep: true,
+      // function: (cep, value) => {
+      //   return (cep === Number);
+      // },
     },
     resume: {
       required: true,
@@ -219,38 +223,91 @@ new window.JustValidate('.js-form', {
       required: true,
     },
   },
-});
-
-// Costumizar as mensagens de required.
-
-// new window.JustValidate('.js-form', {
-//   messages: {
-//     required: 'O campo é obrigatório.',
-//     email: 'ols',
-//     maxLength: 'The field must contain a maximum of :value characters',
-//     minLength: 'The field must contain a minimum of :value characters',
-//     password: 'Password is not valid',
-//     remote: 'Email already exists'
-//   },
-// });
-
-
-
+  messages: {
+    firstname: {
+      required: 'O campo é obrigatório.',
+      maxLength: 'O campo deve conter no máximo de :value caracteres',
+      minLength: 'O campo deve conter no mínimo de :value caracteres',
+    },
+    lastname: {
+      required: 'O campo é obrigatório.',
+      maxLength: 'O campo deve conter no máximo de :value caracteres',
+      minLength: 'O campo deve conter no mínimo de :value caracteres',
+    },
+    email: {
+      required: 'O campo é obrigatório.',
+      maxLength: 'O campo deve conter no máximo de :value caracteres',
+      email: 'Email inválido'
+    },
+    cpf: {
+      required: 'O campo é obrigatório.',
+      maxLength: 'O campo deve conter somente :value numeros',
+      function: 'O campo deve conter somente numeros'
+    },
+    address: {
+      required: 'O campo é obrigatório.',
+      maxLength: 'O campo deve conter no máximo de :value caracteres',
+      minLength: 'O campo deve conter no mínimo de :value caracteres',
+    },
+    city: {
+      required: 'O campo é obrigatório.',
+      maxLength: 'O campo deve conter no máximo de :value caracteres',
+      minLength: 'O campo deve conter no mínimo de :value caracteres',
+    },
+    province: {
+      required: 'O campo é obrigatório.',
+      // function: 'Escolha seu Estado.',
+    },
+    complement: {
+      required: 'O campo é obrigatório.',
+    },
+    cep: {
+      required: 'O campo é obrigatório.',
+    },
+    resume: {
+      required: 'O campo é obrigatório.',
+      maxLength: 'O campo deve conter no máximo de :value caracteres',
+      minLength: 'O campo deve conter no mínimo de :value caracteres',
+    },
+    job: {
+      required: 'O campo é obrigatório.',
+      maxLength: 'O campo deve conter no máximo de :value caracteres',
+      minLength: 'O campo deve conter no mínimo de :value caracteres',
+    },
+    discjob: {
+      required: 'O campo é obrigatório.',
+      maxLength: 'O campo deve conter no máximo de :value caracteres',
+      minLength: 'O campo deve conter no mínimo de :value caracteres',
+    },
+    dateStart: {
+      required: 'Preencha uma data valida.',
+    },
+    dateEnd: {
+      required: 'Preencha uma data valida.',
+    },
+  },
+  submitHandler: function (form, values) {
+    console.log(form, values);
+}});
 
 
 // Criacao das respostas em uma Div.
 
-// buttonSubmit.addEventListener("click", (event) => {
-//   // event.preventDefault();
-//   const newDiv = document.getElementById("values");
+buttonSubmit.addEventListener("click", (event) => {
+  // event.preventDefault();
+  const newDiv = document.getElementById("values");
 
-//   for (let index = 0; index < form.length; index += 1) {
-//     const inputsValue = formElements[index].value;
-//     const inputsName = formElements[index].name;
-//     let keyValue = `${inputsName} = ${inputsValue}`;
-//     const newParagraph = document.createElement("p");
-//     newParagraph.innerHTML = keyValue;
-//     newDiv.appendChild(newParagraph);
-//   }
-// });
+  for (let index = 0; index < form.length; index += 1) {
+    const inputsValue = formElements[index].value;
+    const inputsName = formElements[index].name;
+    let keyValue = `${inputsName} = ${inputsValue}`;
+    const newParagraph = document.createElement("p");
+    newParagraph.innerHTML = keyValue;
+    newDiv.appendChild(newParagraph);
+  }
+});
+
+window.onload = function () {
+  createOptionProvince();
+}
 

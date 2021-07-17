@@ -39,10 +39,7 @@
           </div>
           <div>
             <label class="form-label" for="email">Email:</label>
-            <div class="input-group">
-              <span class="input-group-text" id="inputGroupPrepend2">@</span>
-              <input type="email" name="email" data-validate-field="email" id="email" class="form-control">
-            </div>
+            <input type="email" name="email" data-validate-field="email" id="email" class="form-control">
           </div>
           <div class="col-md-6">
             <label class="form-label" for="city">Cidade:</label>
@@ -60,15 +57,14 @@
           </div>
           <div>
             <label class="form-label" for="address">Endereco:</label>
-            <div class="input-group">
               <input type="text" name="address" data-validate-field="address" id="address" class="form-control">
-            </div>
           </div>
+          <label for="type" class="form-label">Complemento:</label>
           <div class="form-check-inline">
-            <input class="form-check-input" type="radio" name="complement" data-validate-field="house"
+            <input class="form-check-input" type="radio" name="complement" data-validate-field="complement"
               value="house" id="house">
             <label class="form-check-label" for="house">Casa</label>
-            <input class="form-check-input" type="radio" name="complement" data-validate-field="apartment"
+            <input class="form-check-input" type="radio" name="complement" data-validate-field="complement"
               value="apartment" id="apartment" >
             <label class="form-check-label" for="apartment">Apartamento</label>
           </div>
@@ -107,7 +103,6 @@
     </div>
     <section class= "inputs">
       <div id = 'values'>
-
       </div>
     </section>
   </main>
