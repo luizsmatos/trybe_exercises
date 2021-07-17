@@ -149,74 +149,93 @@ let pickerEnd = new Pikaday({
 // Personalize as regras de validação padrão.
 
 
+new window.JustValidate('.js-form', {
+  rules: {
+    firstname: {
+      required: true,
+      minLength: 3,
+      maxLength: 40,
+    },
+    lastname: {
+      required: true,
+      minLength: 3,
+      maxLength: 40,
+    },
+    email: {
+      required: true,
+      email: true,
+      maxLength: 50,
+    },
+    cpf: {
+      required: true,
+      minLength: 11,
+      maxLength: 11,
+    },    
+    address: {
+      required: true,
+      minLength: 3,
+      maxLength: 200,
+    },
+    city: {
+      required: true,
+      minLength: 3,
+      maxLength: 28,
+    },
+    province: {
+      type: 'selected',
+      required: true,
+    },
+    house: {
+      type: 'radio',
+      required: true,
+    },
+    apartment: {
+      type: 'radio',
+      required: true,
+    },
+    cep: {
+      required: true,
+      cep: true,
+    },
+    resume: {
+      required: true,
+      maxLength: 1000,
+      minLength: 150,
+    },
+    job: {
+      required: true,
+      maxLength: 40,
+      minLength: 5,
+    },
+    discjob: {
+      required: true,
+      maxLength: 300,
+      minLength: 5,
+    },
+    dateStart: {
+      required: true,
+    },
+    dateEnd: {
+      required: true,
+    },
+  },
+});
 
+// Costumizar as mensagens de required.
 
-//   rules: {
-//     firstname: {
-//       required: true,
-//       minLength: 3,
-//       maxLength: 40,
-//     },
-//     lastname: {
-//       required: true,
-//       minLength: 3,
-//       maxLength: 40,
-//     },
-//     email: {
-//       required: true,
-//       email: true,
-//       maxLength: 50,
-//     },
-//     cpf: {
-//       required: true,
-//       minLength: 11,
-//       maxLength: 11,
-//     },    
-//     address: {
-//       required: true,
-//       minLength: 3,
-//       maxLength: 200,
-//     },
-//     city: {
-//       required: true,
-//       minLength: 3,
-//       maxLength: 28,
-//     },
-//     province: {
-//       type: 'selected',
-//       required: true,
-//     },
-//     complement: {
-//       type: 'radio',
-//       required: true,
-//     },
-//     cep: {
-//       required: true,
-//       cep: true,
-//     },
-//     resume: {
-//       required: true,
-//       maxLength: 1000,
-//       minLength: 150,
-//     },
-//     job: {
-//       required: true,
-//       maxLength: 40,
-//       minLength: 5,
-//     },
-//     discjob: {
-//       required: true,
-//       maxLength: 300,
-//       minLength: 5,
-//     },
-//     dateStart: {
-//       required: true,
-//     },
-//     dateEnd: {
-//       required: true,
-//     },
+// new window.JustValidate('.js-form', {
+//   messages: {
+//     required: 'O campo é obrigatório.',
+//     email: 'ols',
+//     maxLength: 'The field must contain a maximum of :value characters',
+//     minLength: 'The field must contain a minimum of :value characters',
+//     password: 'Password is not valid',
+//     remote: 'Email already exists'
 //   },
 // });
+
+
+
 
 
 // Criacao das respostas em uma Div.

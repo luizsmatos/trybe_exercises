@@ -26,32 +26,27 @@
         <div class="row g-3">
           <legend class="title">Informacoes Pessoais</legend>
           <div class="col-md-4">
-            <label class="form-label" for="first-name">Nome:</label>
-            <input type="text" name="first-name" data-validate-field="first-name" id="first-name" class="form-control"
-              maxlength="40" >
+            <label class="form-label" for="firstname">Nome:</label>
+            <input type="text" name="first-name" data-validate-field="firstname" id="firstname" class="form-control">
           </div>
           <div class="col-md-4">
-            <label class="form-label" for="last-name">Sobrenome:</label>
-            <input type="text" name="last-name" data-validate-field="last-name" id="last-name" class="form-control"
-              maxlength="40" >
+            <label class="form-label" for="lastname">Sobrenome:</label>
+            <input type="text" name="last-name" data-validate-field="lastname" id="lastname" class="form-control">
           </div>
           <div class="col-md-4">
             <label class="form-label" for="cpf-number">CPF:</label>
-            <input type="text" name="cpf" onblur="formataCPF(this)" data-validate-field="cpf" id="cpf-number" class="form-control" min="1"
-              maxlength="11" >
+            <input type="text" name="cpf" onblur="formataCPF(this)" data-validate-field="cpf" id="cpf-number" class="form-control" min="1">
           </div>
           <div>
             <label class="form-label" for="email">Email:</label>
             <div class="input-group">
               <span class="input-group-text" id="inputGroupPrepend2">@</span>
-              <input type="email" name="email" data-validate-field="email" id="email" class="form-control"
-                maxlength="50" >
+              <input type="email" name="email" data-validate-field="email" id="email" class="form-control">
             </div>
           </div>
           <div class="col-md-6">
             <label class="form-label" for="city">Cidade:</label>
-            <input type="text" name="city" data-validate-field="city" id="city" class="form-control" maxlength="28"
-              >
+            <input type="text" name="city" data-validate-field="city" id="city" class="form-control">
           </div>
           <div class="col-md-3">
             <label class="form-label" for="province">Estado:</label>
@@ -61,23 +56,19 @@
           </div>
           <div class="col-md-3">
             <label for="validationDefault05" class="form-label">Cep</label>
-            <input type="number" class="form-control" name="cep" data-validate-field="cep" id="validationDefault05"
-              >
+            <input type="number" class="form-control" name="cep" data-validate-field="cep" id="validationDefault05">
           </div>
           <div>
             <label class="form-label" for="address">Endereco:</label>
             <div class="input-group">
-              <input type="text" name="address" data-validate-field="address" id="address" class="form-control"
-                maxlength="200" >
+              <input type="text" name="address" data-validate-field="address" id="address" class="form-control">
             </div>
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="complement" data-validate-field="complement"
-              value="house" id="house" >
+          <div class="form-check-inline">
+            <input class="form-check-input" type="radio" name="complement" data-validate-field="house"
+              value="house" id="house">
             <label class="form-check-label" for="house">Casa</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="complement" data-validate-field="complement"
+            <input class="form-check-input" type="radio" name="complement" data-validate-field="apartment"
               value="apartment" id="apartment" >
             <label class="form-check-label" for="apartment">Apartamento</label>
           </div>
@@ -95,12 +86,12 @@
           </div>
 
           <div class="col-md-4">
-            <label class="form-label" for="start">Data de início:</label>
-            <input class="form-control" type="text" name="start" data-validate-field="start" id="datepicker">
+            <label class="form-label" for="dateStart">Data de início:</label>
+            <input class="form-control" type="text" name="dateStart" data-validate-field="dateStart" id="dateStart">
           </div>
           <div class="col-md-4">
-            <label class="form-label" for="end">Data de termino:</label>
-            <input class="form-control" type="text" name="end" data-validate-field="end" id="datepicker2">
+            <label class="form-label" for="dateEnd">Data de termino:</label>
+            <input class="form-control" type="text" name="dateEnd" data-validate-field="dateEnd" id="dateEnd">
           </div>
           <div>
             <label class="form-label" for="discjob">Descrição do cargo:</label>
@@ -120,8 +111,7 @@
       </div>
     </section>
   </main>
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+  <script src="Just-validate-master/dist/js/just-validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
   <script src="script.js"></script>
 </body>
