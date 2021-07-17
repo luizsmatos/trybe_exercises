@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Comfortaa, sans-serif;
+}
+
+body {
+  background-color: rgb(250, 228, 186);
+}
+
+.hero {
+  margin-top: 30px;
+}
+
+.title {
+  color: rgb(119, 75, 8);
+}
+
+/* https://pt.stackoverflow.com/questions/177573/retirar-as-setas-no-campo-tipo-number */
+/* Referencia utilizada, para retirar as "setas" do input number. */
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+
+}
+
+#values {
+  display: none;
+}
+
+#resume {
+  resize: none;
+  height: 150px;
+}
