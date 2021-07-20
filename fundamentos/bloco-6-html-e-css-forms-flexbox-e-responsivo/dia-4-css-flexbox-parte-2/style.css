@@ -6,18 +6,21 @@
 }
 
 body {
-  background-color: rgb(247, 247, 247);
+  background-color: rgba(241, 239, 239, 0.979);
 }
 
 .header-container {
   background-color: #5C687C;
   display: flex;
+  height: 75px;
 }
 
 .logo-container {
   display: flex;
   justify-content: center;
+  align-self: center;
   flex-basis: 268px;
+  height: 50px;
 }
 
 .menu-container {
@@ -25,12 +28,13 @@ body {
   flex-basis: 500px;
   order: 1;
   flex-grow: 1;
-  align-items: center;
 }
 
 .menu-container ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
   width: 100%;
 }
 
@@ -39,7 +43,7 @@ body {
   font-weight: 500;
   font-size: 1.3rem;
   list-style: none;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .main-container {
   display: flex;
