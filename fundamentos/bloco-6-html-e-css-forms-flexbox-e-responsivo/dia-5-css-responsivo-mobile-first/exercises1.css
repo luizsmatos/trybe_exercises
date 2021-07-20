@@ -8,11 +8,11 @@
 
 body {
   font-family: 'Quicksand', sans-serif;
-  font-size: x-large;
+  font-size: larger;
 }
 
 h1 {
- 
+  font-size: 1.5em;
 }
 h2 {
 
