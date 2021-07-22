@@ -39,4 +39,22 @@ const factorial = (number) => number > 1 ? number * factorial(number - 1) : 1;
 console.log(factorial(0));
 
 
-// Parte 2 - 
+// Parte 2 - Exercicio 2 / Crie uma função que receba uma frase e retorne qual a maior palavra.
+
+function longestWord (string) {
+  let splitPalavra = string.split(' ');
+  let maiorTamanho = 0;
+  let maiorPalavra = 0;
+
+  for (let index = 0; index < splitPalavra.length; index += 1) {
+    if (maiorTamanho < splitPalavra[index].length) {
+      maiorTamanho = splitPalavra[index].length
+      maiorPalavra = splitPalavra[index]
+    }
+  }
+  return maiorPalavra;
+}
+console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"))
+
+// Parte 3 - Exercicio 3 / Crie uma página que contenha:
+
