@@ -58,3 +58,16 @@ console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu
 
 // Parte 3 - Exercicio 3 / Crie uma página que contenha:
 
+const buttonClick = document.getElementById('click')
+const visualizaCounter = document.getElementById('counter');
+
+let counter = 0;
+
+buttonClick.addEventListener('click', () => {
+  counter += 1;
+
+  visualizaCounter.value = counter;
+});
+
+
+
