@@ -1,3 +1,4 @@
+// Parte 1 - Faça as modificações necessárias na função para que o seu comportamento respeite o escopo no qual cada variável foi declarada.
 
 const testingScope = (escopo) => {
   if (escopo === true) {
@@ -11,3 +12,13 @@ const testingScope = (escopo) => {
 }
 
 testingScope(true);
+
+// Parte 2 - Copie o código abaixo e faça uma função que retorne o array oddsAndEvens em ordem crescente.
+
+const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+oddsAndEvens.sort(function(a, b) {
+  return a - b;
+});
+console.log(`Os números ${oddsAndEvens} se encontram ordenados de forma crescente!`);
+
