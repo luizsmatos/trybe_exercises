@@ -71,3 +71,5 @@ buttonClick.addEventListener('click', () => {
 
 
 
+// Parte 4 - Exercicio 4 / Crie um código JavaScript com a seguinte especificação:
+
