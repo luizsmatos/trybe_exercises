@@ -69,11 +69,8 @@ const initialsProvinces = [
 // Criacao dos estados.
 
 function createOptionProvince() {
-  for (
-    let indexProvince = 0;
-    indexProvince < provinces.length;
-    indexProvince += 1
-  ) {
+
+  for (let indexProvince = 0; indexProvince < provinces.length; indexProvince += 1) {
     const newProvince = document.createElement("option");
     newProvince.innerText = provinces[indexProvince];
     newProvince.classList.add("province");
