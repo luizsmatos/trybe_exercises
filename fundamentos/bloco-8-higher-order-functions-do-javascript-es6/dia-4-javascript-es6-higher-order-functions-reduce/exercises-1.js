@@ -9,10 +9,10 @@ const arrays = [
 function flatten() {
 
   const reduce = arrays.reduce((acc, elemento,) => { 
-    return acc.concat(elemento, [])
-  })
+    return acc.concat(elemento)
+  }, [])
+  console.log(reduce)
   return reduce;
 }
-
 
 assert.deepStrictEqual(flatten(), ['1', '2', '3', true, 4, 5, 6]);
