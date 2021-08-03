@@ -15,20 +15,16 @@ const expectedResult = {
 
 function longestNamedBook() {
   // escreva seu código aqui
-  let nameOfBook = '';
-  const lengthBooks = books.reduce((acc, value) => {
-    if(acc < value.name.length) {
-      acc = value.name.length;
-      nameOfBook = value;
+  const lengthBooks = books.reduce((book, value) => {
+    if(book.name.length < value.name.length) {
+      return value;
     }
-    return acc;
+    return book;
   
-  }, 0)
-
-  return nameOfBook;
+  })
+  return lengthBooks;
 }
 
-// console.log(longestNamedBook())
 
 assert.deepStrictEqual(longestNamedBook(), expectedResult);
 
