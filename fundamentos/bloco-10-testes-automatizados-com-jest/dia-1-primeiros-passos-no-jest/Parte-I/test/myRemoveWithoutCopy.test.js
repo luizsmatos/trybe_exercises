@@ -1,0 +1,1 @@
+const myRemoveWithoutCopy = require('../src/myRomoveWIthoutCopy')
