@@ -12,15 +12,36 @@ const findAnimalByName = (name) => {
          resolve(animal);
       };
 
-       reject('Nenhum animal com esse nome!');
+       reject(new Error('Nenhum animal com esse nome!'));
     }, 100);
   })
 };
 
-const getAnimal = async (name) => {
+const findAnimalByAge = (age) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const animal = Animals.find((animal) => animal.age === age);
+      if (animal) {
+         resolve(animal);
+      };
+
+       reject(new Error('Nenhum animal com essa idade!'));
+    }, 100);
+  })
+};
+
+const getAnimalName = async (name) => {
   const animal = await findAnimalByName(name);
   return animal;
 };
 
+const getAnimalAge = async (age) => {
+  const animal = await findAnimalByAge(age);
+  return animal;
+};
 
-module.exports = getAnimal;
+
+module.exports = {
+  getAnimalAge,
+  getAnimalName,
+};
