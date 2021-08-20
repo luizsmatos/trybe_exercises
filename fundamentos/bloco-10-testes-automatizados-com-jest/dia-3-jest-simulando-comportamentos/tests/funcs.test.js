@@ -12,6 +12,7 @@ describe('Quando chamar a funcoes getUpperCase, getFirstLetter, concatenate', ()
     expect(funcs.getUpperCase('TRYBE!')).toBe('trybe!');
     expect(funcs.getUpperCase).toHaveBeenCalled();
     expect(funcs.getUpperCase).toHaveBeenCalledTimes(1)
+    expect(funcs.getUpperCase).toHaveBeenCalledWith('TRYBE!');
   });
 
   it('getFirstLetter deve também receber uma string e retornar só a primeira letra, mas agora ela deve retornar a última letra de uma string.', () => {
@@ -21,6 +22,7 @@ describe('Quando chamar a funcoes getUpperCase, getFirstLetter, concatenate', ()
     expect(funcs.getFirstLetter('TRYBE')).toBe('E');
     expect(funcs.getFirstLetter).toHaveBeenCalled();
     expect(funcs.getFirstLetter).toHaveBeenCalledTimes(1)
+    expect(funcs.getFirstLetter).toHaveBeenCalledWith('TRYBE');
   })
 
   it('concatenate deve receber duas strings e concatená-las, mas agora ela deve receber três strings e concatená-las.', () => {
@@ -30,5 +32,6 @@ describe('Quando chamar a funcoes getUpperCase, getFirstLetter, concatenate', ()
     expect(funcs.concatenate('Eu', ' estudo na ','TRYBE!')).toBe('Eu estudo na TRYBE!');
     expect(funcs.concatenate).toHaveBeenCalled();
     expect(funcs.concatenate).toHaveBeenCalledTimes(1)
+    expect(funcs.concatenate).toHaveBeenCalledWith('Eu', ' estudo na ','TRYBE!');
   })
 });
