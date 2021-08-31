@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import "./Pokemon.css";
 
 class Pokemon extends React.Component {
@@ -9,11 +10,10 @@ class Pokemon extends React.Component {
     return (
       <div className="content">
         <div className="infos-pokemon">
-          <p className="namePokemon">{name}</p>
-          <p className="typePokemon">{type}</p>
+          <p className="namePokemon"><strong>Name: </strong>{name}</p>
+          <p className="typePokemon"><strong>Type: </strong>{type}</p>
           <p className="averagePokemon">
-            {averageWeight.value}
-            {averageWeight.measurementUnit}
+            <strong>Average:</strong> {averageWeight.value}{averageWeight.measurementUnit}
           </p>
         </div>
         <a href={moreInfo} target="_blank" rel="noreferrer">
@@ -23,5 +23,18 @@ class Pokemon extends React.Component {
     );
   }
 }
+
+Pokemon.propTypes = {
+  pokemon: PropTypes.shape({
+    name: PropTypes.string,
+    type: PropTypes.string,
+    averageWeight: PropTypes.shape({
+      measurementUnit: PropTypes.string,
+      value: PropTypes.number,
+    }),
+    image: PropTypes.string,
+    moreInfo: PropTypes.string,
+  }).isRequired,
+};
 
 export default Pokemon;
