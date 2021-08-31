@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Pokedex from './Pokedex';
+import Pokedex from './components/Pokedex/Pokedex';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
