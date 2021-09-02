@@ -1,0 +1,11 @@
+.title {
+  text-align: center;
+}
+
+.Pokedex {
+  margin: 0 auto;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
