@@ -1,0 +1,15 @@
+header {
+  height: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.title {
+  align-self: center;
+  font-family: 'Pokemon Solid', sans-serif;
+  color: var(--primary-purple);
+  font-size: 40px;
+
+}
