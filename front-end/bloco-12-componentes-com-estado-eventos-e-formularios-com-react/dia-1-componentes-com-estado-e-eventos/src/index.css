@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300;1,400&display=swap');
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+
+:root {
+  --primary-purple: rgb(115, 66, 228);
+
+  --primary-black: rgb(18, 18, 20);
+
+  --primary-white-font: rgb(255, 255, 230);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-black);
+}
+
+.Electric {
+  background-color: rgb(189, 192, 6);
+}
+
+.Fire {
+  background-color: rgb(182, 12, 12);
+}
+
+.Bug {
+  background-color: green;
+}
+
+.Poison {
+  background-color: blueviolet;
+}
+
+.Psychic {
+  background-color: rgb(124, 24, 116);
+}
+
+.Normal {
+  background-color: grey;
+}
+
+.Dragon {
+  background-color: rgba(255, 68, 0, 0.575);
+}
