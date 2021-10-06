@@ -7,16 +7,6 @@ const ESTADO_INICIAL = {
   index: 0,
 };
 
-const NEXT_COLOR = (state) => {
-  return state.index < ESTADO_INICIAL.colors.length - 1
-    ? state.index + 1
-    : state.index;
-};
-
-const PREVIOUS_COLOR = (state) => {
-  return state.index > 0 ? state.index - 1 : state.index;
-};
-
 const reducer = (state = ESTADO_INICIAL, action) => {
   switch (action.type) {
     case "NEXT_COLOR":
