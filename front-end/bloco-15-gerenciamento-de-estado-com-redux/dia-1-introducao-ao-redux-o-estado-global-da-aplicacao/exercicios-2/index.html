@@ -41,8 +41,8 @@
           case 'ESTADO_INICIAL_1':
             return {
               ...state,
-              nome: 'Luiz Gustavo',
-              sobrenome: 'Silva Matos'
+              nome: action.nome,
+              sobrenome: action.sobrenome,
             }
           default:
             return state;
@@ -54,8 +54,8 @@
           case 'ESTADO_INICIAL_2':
             return {
               ...state,
-              nome: 'Laura',
-              sobrenome: 'Vianini Matos'
+              nome: action.nome,
+              sobrenome: action.sobrenome,
             }
           default:
             return state;
@@ -71,9 +71,16 @@
 
       window.onload = () => {
         setTimeout(() => {
-          store.dispatch({ type: 'ESTADO_INICIAL_1'})
-          store.dispatch({ type: 'ESTADO_INICIAL_2'})
-          console.log('test')
+          store.dispatch({
+          type: 'ESTADO_INICIAL_1',
+          nome: 'Luiz Gustavo',
+          sobrenome: 'Silva Matos'
+        });
+        store.dispatch({
+          type: 'ESTADO_INICIAL_2',
+          nome: 'Laura',
+          sobrenome: 'Vianini Matos',
+        });
         }, 3000);
       };
 
